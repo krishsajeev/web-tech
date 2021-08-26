@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .card {
@@ -8,7 +10,12 @@
   transition: 0.3s;
   width: 40%;
 }
-
+body{
+ background-color:cadetblue;
+}
+*h2{
+  padding-top: 5px;
+}
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -16,64 +23,88 @@
 .container {
   padding: 2px 16px;
 }
+.firstdiv{
+  position: absolute;
+  left: 35%;
+
+}
+header{
+            background-color: black;
+}
+#event{
+            color:rgba(127, 255, 244, 0.897);
+            padding: 25px;
+}
+
 </style>
 </head>
 <body>
-
-<h2>BASKETBALL</h2>
-
-<div class="card">
-  <img src="C:\Users\LOTUS\Pictures\Saved Pictures\download1.jfif" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Captain:Shanmugavel</b></h4> 
-    <p>Playing this game since 1990s. Have won state championship title thrice.Participated in the U-25 national competition in 2020.</p> 
+  <header>
+    <div>
+        <h1 id="event">
+            TEAMS
+        </h1>
+    </div>
+</header>
+<div class="firstdiv">
+  <h2>BASKETBALL</h2>
+  <div class="card">
+    <img src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1581678662/DCUK/Content/iStock-959080376.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Captain:Shanmugavel</b></h4> 
+      <p>Playing this game since 1990s. Have won state championship title thrice.Participated in the U-25 national competition in 2020.</p> 
+      </div>
+    </div>
+  <h2>Cricket</h2>
+  
+  <div class="card">
+    <img src="https://cdn.britannica.com/47/148847-131-607DD61C/Cricket-bat-ball.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Captain:Gowtham</b></h4> 
+      <p>Playing this game since 2000. Have won district championship title thrice.Participated in the national competition in 2018.Have been selected for the domestic matches every year.</p> 
+    </div>
   </div>
-</div>
-<h2>Cricket</h2>
-
-<div class="card">
-  <img src="C:\Users\LOTUS\Pictures\Saved Pictures\cricket.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Captain:Gowtham</b></h4> 
-    <p>Playing this game since 2000. Have won district championship title thrice.Participated in the national competition in 2018.Have been selected for the domestic matches every year.</p> 
+  <h2>FOOTBALL</h2>
+  
+  <div class="card">
+    <img src="https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Captain:Michael</b></h4> 
+      <p>Playing this game since 2002. Have won district championship title twice.Participated in the state level competition in 2012.Have been selected for the domestic matches every year.Two of them Have been selected for the hero ISL tournament</p> 
+    </div>
   </div>
-</div>
-<h2>FOOTBALL</h2>
-
-<div class="card">
-  <img src="C:\Users\LOTUS\Pictures\Saved Pictures\football.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Captain:Michael</b></h4> 
-    <p>Playing this game since 2002. Have won district championship title twice.Participated in the state level competition in 2012.Have been selected for the domestic matches every year.Two of them Have been selected for the hero ISL tournament</p> 
+  <h2>KHO-KHO</h2>
+  
+  <div class="card">
+    <img src="https://static.toiimg.com/thumb/msid-78699997,width-1200,height-900,resizemode-4/.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Captain:Shyam</b></h4> 
+      <p>Playing this game since 2000.Have won continuously all the zonal championship for the last 9 yeard.Have won state championship title twice.Participated in the national competition in 2018.Have been selected for the domestic matches every year.</p> 
+    </div>
   </div>
-</div>
-<h2>KHO-KHO</h2>
-
-<div class="card">
-  <img src="C:\Users\LOTUS\Pictures\Saved Pictures\Kho-Kho.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Captain:Shyam</b></h4> 
-    <p>Playing this game since 2000.Have won continuously all the zonal championship for the last 9 yeard.Have won state championship title twice.Participated in the national competition in 2018.Have been selected for the domestic matches every year.</p> 
+  <h2>VOLLEYBALL</h2>
+  
+  <div class="card">
+    <img src="data:image/jpeg;base64,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" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Captain:Santhosh</b></h4> 
+      <p>Playing this game since 2000. Have won district championship title thrice.Participated in the national competition in 2018.appeared for the special volleyball contest held in new delhi.</p> 
+    </div>
   </div>
-</div>
-<h2>VOLLEYBALL</h2>
-
-<div class="card">
-  <img src="C:\Users\LOTUS\Pictures\Saved Pictures\volleyball.jfif" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Captain:Santhosh</b></h4> 
-    <p>Playing this game since 2000. Have won district championship title thrice.Participated in the national competition in 2018.appeared for the special volleyball contest held in new delhi.</p> 
+  <h2>KABADDI</h2>
+  
+  <div class="card">
+    <img src="https://www.oneindia.com/ph-big/2017/08/bengaluru-bulls-players-with-bengal-warriors-in-action-during-their-pro-kabaddi-league-match_150234548720.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Captain:Suriya</b></h4> 
+      <p>Playing this game since 2004. Have won district championship title five times.Participated in the national competition in 2019.Have been selected for the domestic matches(pro kabaddi league) every year.</p> 
+    </div>
   </div>
-</div>
-<h2>KABADDI</h2>
 
-<div class="card">
-  <img src="C:\Users\LOTUS\Pictures\Saved Pictures\kabaddi.jfif" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Captain:Suriya</b></h4> 
-    <p>Playing this game since 2004. Have won district championship title five times.Participated in the national competition in 2019.Have been selected for the domestic matches(pro kabaddi league) every year.</p> 
-  </div>
 </div>
+
+
 
 </body>
 </html> 
+
