@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script src="../static/angular.min.js"></script>
+<link rel="stylesheet" href="../static/w3.css">
+<body>
+
+<script src="../static/script.js">
+</script>
+
+<div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+  <header class="w3-container w3-light-grey w3-padding-16">
+    <h3>My Shopping List</h3>
+  </header>
+  <ul class="w3-ul">
+    <li ng-repeat="x in products" class="w3-padding-16">{{x}} {{quantity[x]}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+  </ul>
+  <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+      <div class="w3-col s10">
+        <input placeholder="Add shopping items here" ng-model="addMe" class="w3-input w3-border w3-padding">
+      </div>
+      <div class="w3-col s2">
+        <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Add</button>
+      </div>
+    </div>
+    <p class="w3-text-red">
+		You can choose from<br>
+			<table>
+			<th>KIT</th><th>QUANTITY</th>
+				<tr><td>Cricket bat</td> <td>6</td></tr>
+				<tr><td>Cricket ball</td> <td>6</td></tr>
+				<tr><td>Football</td> <td>6</td></tr>
+				<tr><td>Badminton racquet</td> <td>6</td></tr>
+			</table>
+	</p>
+  </div>
+</div>
+
+</body>
+</html>
