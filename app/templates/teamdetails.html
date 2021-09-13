@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        .main{
+            align-items: center;
+            margin-top: 8px;
+            background-color:dimgrey;
+            padding: 20px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            color: white;
+        }
+    </style>
+</head>
+<body class="container">
+    <script type="text/javascript">
+        var app = angular.module('MyApp', [])
+        app.controller('MyController', function ($scope, $window) {
+            $scope.Students = [
+                { FirstName: "Shyam", LastName: "Kumaresan", Branch: "IT", Year: "Third" },
+                { FirstName: "Ajay", LastName: "Rajan", Branch: "CSE", Year: "Third" },
+                { FirstName: "Sajeev", LastName: "Krishna", Branch: "CIVIL", Year: "Third" },
+                { FirstName: "Tamil", LastName: "Selvan", Branch: "MECH", Year: "Third" }
+            ];
+
+            $scope.Add = function () {
+                //Add the new item to the Array.
+                var customer = {};
+                customer.FirstName = $scope.FirstName;
+                customer.LastName = $scope.LastName;
+                customer.Branch = $scope.Branch;
+                customer.Year = $scope.Year;
+                $scope.Students.push(customer);
+                //Clear the TextBoxes.
+                $scope.Name = "";
+                $scope.Country = "";
+            };
+
+            $scope.Remove = function (index) {
+                //Find the record using Index from Array.
+                var name = $scope.Students[index].Name;
+                if ($window.confirm("Do you want to delete: " + name)) {
+                    //Remove the item from Array using Index.
+                    $scope.Students.splice(index, 1);
+                }
+            }
+        });
+    </script>
+    <div ng-app="MyApp" ng-controller="MyController" class="main">
+
+        </br>
+
+        <center><h1>PLAYER LIST</ht></center>
+        </br>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">FirstName</label>
+                <input type="text" ng-model="FirstName" class="form-control" placeholder="First Name" aria-label="FirstName" aria-describedby="basic-addon1">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">LastName</label>
+                <input type="text" ng-model="LastName" class="form-control" placeholder="Last Name" aria-label="LastName" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputState">Branch</label>
+                <input type="text" ng-model="Branch" placeholder="Branch" class="form-control" aria-label="Branch" id="inputBranch">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">Year</label>
+                <input type="text" ng-model="Year" placeholder="Year" class="form-control" aria-label="Year" id="inputCity">
+            </div>
+        </div>
+        <input class="btn btn-success" type="button" ng-click="Add()" value="Add Player" /></td>
+        <th>
+            </br>
+            </br>
+            <table class="table table-hover">
+                <tr>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">Branch</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Action</th>
+                </tr>
+                <tbody ng-repeat="m in Students">
+                    <tr>
+                        <td scope="row">{{m.FirstName}}</td>
+                        <td>{{m.LastName}}</td>
+                        <td>{{m.Branch}}</td>
+                        <td>{{m.Year}}</td>
+                        <td><input class="btn btn-danger" type="button" ng-click="Remove($index)" value="Remove" /></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>
