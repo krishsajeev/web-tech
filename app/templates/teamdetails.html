@@ -13,8 +13,8 @@
             margin-top: 8px;
             background-color:dimgrey;
             padding: 20px;
-            border-top-left-radius: 50px;
-            border-bottom-right-radius: 50px;
+            border-top-left-radius: 80px;
+            border-bottom-right-radius: 30px;
             color: white;
         }
     </style>
@@ -24,10 +24,6 @@
         var app = angular.module('MyApp', [])
         app.controller('MyController', function ($scope, $window) {
             $scope.Students = [
-                { FirstName: "Shyam", LastName: "Kumaresan", Branch: "IT", Year: "Third" },
-                { FirstName: "Ajay", LastName: "Rajan", Branch: "CSE", Year: "Third" },
-                { FirstName: "Sajeev", LastName: "Krishna", Branch: "CIVIL", Year: "Third" },
-                { FirstName: "Tamil", LastName: "Selvan", Branch: "MECH", Year: "Third" }
             ];
 
             $scope.Add = function () {
