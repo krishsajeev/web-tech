@@ -1,0 +1,32 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.box{
+position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: #1DB4A7;
+  padding: 20px;
+  padding-left:30px;
+  vertical-align: middle;
+  box-shadow: 10px 10px 50px #888888;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+   top: 70%;
+  left:800px;
+}
+
+h1{
+  font-weight: 400;
+  font-size: 30px;
+  color:black;
+  
+}
+
+.skill{
+  font-weight: 300;
+  color:#DCE912;
+}
