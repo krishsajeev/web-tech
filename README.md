@@ -1,2 +1,3 @@
-# web-tech
-PROJECT FOR 18IT511
+#WEB APPLICATION
+
+A complete web application for college sports department.
